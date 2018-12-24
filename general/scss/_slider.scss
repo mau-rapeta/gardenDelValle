@@ -1,0 +1,287 @@
+.slider {
+    position: relative;
+    height: 100vh;
+    min-height: 63rem;
+    background: url(../img/background-home.jpg);
+    display: flex;
+    align-items: center;
+    .carousel {
+        position: relative !important;
+        width: 60%;
+        height: 70%;
+        margin: 0 auto;
+        display: block;
+
+        &-indicators {
+            display: block;
+
+            &--1 {
+                top: initial;
+            }
+        }
+
+        &-control {
+            position: absolute;
+            top: 50%;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            margin-top: -25px;
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            border-radius: 4px;
+            z-index: 5;
+            font-size: 3em;
+            text-shadow: none;
+            background: none;
+        }
+
+        &-inner {
+            height: 60vh;
+            min-height: 40rem;
+            margin-top: 3vh;
+            .item {
+                height: inherit;
+                transition-property: opacity;
+                background-position: center;
+                background-size: cover;
+
+                &:first-child {
+                    background: rgba(139, 139, 133, 0);
+                }
+                &:nth-child(2) {
+                    background: url("../img/backSlide-02.png");
+                    background-size: cover;
+                }
+                &:last-child {
+                    background: url("../img/backSlide-03.png");
+                    background-size: cover;
+                }
+            }
+            .item,
+            .active.left,
+            .active.right {
+                opacity: 0;
+            }
+
+            .active,
+            .next.left,
+            .prev.right {
+                opacity: 1;
+            }
+
+            .next,
+            .prev,
+            .active.left,
+            .active.right {
+                left: 0;
+                transform: translate3d(0, 0, 0);
+            }
+
+        }
+    }
+
+    &__heading {
+        @include center-align-transform;
+        // top: 20%;
+        // left: 15%;
+        font-size: 6.5vw;
+        font-weight: 500;
+        line-height: .9;
+        span a{
+            width: 15vw;
+            font-size: 1.3vw;
+            font-weight: 400;
+            color: white;
+            line-height: 3vh;
+            cursor: pointer;
+            display: block;
+            margin-top: 3vh;
+        }
+        span{
+            width: 20vw;
+            font-size: 1.3vw;
+            font-weight: 400;
+            color: white;
+            line-height: 3vh;
+            display: block;
+            margin-top: 2vh;
+        }
+
+        &--1 {
+            top: 19%;
+            left: 17%;
+        }
+
+        &--2 {
+            top: 24%;
+            left: 19%;
+        }
+
+        &--3 {
+            top: 28%;
+            left: 19%;
+        }
+    }
+
+    &__image {
+        @include center-align-transform;
+        // top: 7%;
+        // left: 42%;
+        width: 50%;
+
+        &--1 {
+            top: 9%;
+            left: 48%;
+        }
+
+        &--2 {
+            top: 7%;
+            left: 42%;
+        }
+
+        &--3 {
+            top: 11%;
+            left: 44%;
+        }
+    }
+
+    .scroll-box {
+        @include center-align-transform;
+        top: 85%;
+        left: 50%;
+    }
+    .scroll-line{
+        @include center-align-transform;
+        bottom: -10%;
+        left: 50%;
+        width: 1px;
+        height: 15%;
+        background: white;
+        z-index: 299;
+    }
+
+    .scroll {
+        width: 4.5rem;
+    }
+
+    svg{
+        width: 45vw;
+        position: absolute;
+        top: 16%;
+        left: 13%;
+    }
+
+    .indicatorScroll{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 3%;
+        text-align: center;
+        img{
+            width: 5%;
+        }
+    }
+
+}
+
+// .carousel-indicators {
+//     bottom: 0;
+//     li{
+//         margin: 1px 2rem;
+//     }
+//     .active{
+//         margin: 0 2rem;
+//     }
+// }
+
+.left.carousel-control > i{
+    position: absolute;
+}
+
+.right.carousel-control > i{
+    position: absolute;
+}
+
+
+#slider .active {
+    .animation.animated-item-1 {
+        -webkit-animation: fadeInUp 300ms linear 300ms both;
+        -moz-animation: fadeInUp 300ms linear 300ms both;
+        -o-animation: fadeInUp 300ms linear 300ms both;
+        -ms-animation: fadeInUp 300ms linear 300ms both;
+        animation: fadeInUp 300ms linear 300ms both;
+    }
+    .animation.animated-item-2 {
+        -webkit-animation: fadeInRight 300ms linear 600ms both;
+        -moz-animation: fadeInRight 300ms linear 600ms both;
+        -o-animation: fadeInRight 300ms linear 600ms both;
+        -ms-animation: fadeInRight 300ms linear 600ms both;
+        animation: fadeInRight 300ms linear 600ms both;
+    }
+    .animation.animated-item-3 {
+        -webkit-animation: fadeInUp 300ms linear 900ms both;
+        -moz-animation: fadeInUp 300ms linear 900ms both;
+        -o-animation: fadeInUp 300ms linear 900ms both;
+        -ms-animation: fadeInUp 300ms linear 900ms both;
+        animation: fadeInUp 300ms linear 900ms both;
+    }
+    .animation.animated-item-4 {
+        -webkit-animation: fadeInUp 300ms linear 1200ms both;
+        -moz-animation: fadeInUp 300ms linear 1200ms both;
+        -o-animation: fadeInUp 300ms linear 1200ms both;
+        -ms-animation: fadeInUp 300ms linear 1200ms both;
+        animation: fadeInUp 300ms linear 1200ms both;
+    }
+    svg path{
+        stroke-dasharray: 2850;
+        stroke-dashoffset: 2850;
+        animation: 4s diamont 1 forwards;
+    }
+}
+
+@keyframes diamont{
+    from{
+        stroke-dashoffset: 2850;
+    }
+    to{
+        stroke-dashoffset:0;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .slider {
+        display: none;
+
+        &__heading {
+            left: 45%;
+            font-size: 7vw;
+            z-index: 99;
+        }
+    }
+
+    .scroll-box {
+        display: none;
+    }
+    .scroll-line{
+        display: none;
+    }
+
+    .slider__image {
+        top: 50%;
+        left: 70%;
+        width: 60vw;
+    }
+}
+
+@media screen and (max-width: 691px) {
+    .slider {
+
+        &__heading {
+            left: 45%;
+            font-size: 9vw;
+            z-index: 99;
+        }
+    }
+
+}

@@ -1,0 +1,295 @@
+.slider3 {
+  position: relative;
+  height: 100vh;
+  background: #1d1d1b;
+  display: none;
+  align-items: center;
+  .carousel {
+    position: relative !important;
+    width: 50%;
+    height: 70%;
+    margin: 0 auto;
+    display: block;
+
+    &-indicators {
+      display: block;
+    }
+
+    &-control {
+      position: absolute;
+      top: 50%;
+      color: rgb(255, 255, 255);
+      display: inline-block;
+      margin-top: -25px;
+      height: 4vw;
+      width: 4vw;
+      text-align: center;
+      border-radius: 4px;
+      z-index: 5;
+      font-size: 3em;
+      text-shadow: none;
+      background: none;
+    }
+
+    &-inner {
+      height: 60vh;
+      margin-top: 3vh;
+      .item {
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        left: 0 !important;
+        opacity: 0;
+        top: 0;
+        position: absolute;
+        display: block !important;
+        -webkit-transition: opacity ease-in-out 500ms;
+        -moz-transition: opacity ease-in-out 500ms;
+        -o-transition: opacity ease-in-out 500ms;
+        transition: opacity ease-in-out 500ms;
+
+        &:first-child {
+          background: url(../img/sushiitto.jpg);
+          background-size: cover;
+        }
+        &:nth-child(2) {
+          background: url(../img/moyo.jpg);
+          background-size: cover;
+        }
+        &:nth-child(3) {
+          background: url(../img/mansion.jpg);
+          background-size: cover;
+        }
+        &:last-child {
+          background: url(../img/chilis.jpg);
+          background-size: cover;
+        }
+      }
+      .item,
+      .active.left,
+      .active.right {
+        opacity: 0;
+      }
+
+      .active,
+      .next.left,
+      .prev.right {
+        opacity: 1;
+        -webkit-transition: opacity ease-in-out 500ms;
+        -moz-transition: opacity ease-in-out 500ms;
+        -o-transition: opacity ease-in-out 500ms;
+        transition: opacity ease-in-out 500ms;
+      }
+
+      .next,
+      .prev,
+      .active.left,
+      .active.right {
+        left: 0;
+        transform: translate3d(0, 0, 0);
+      }
+
+    }
+  }
+
+  &__heading {
+    @include center-align-transform;
+    top: 20%;
+    left: 15%;
+    font-size: 6.5vw;
+    font-weight: 500;
+    line-height: 10vh;
+    span a{
+      width: 15vw;
+      font-size: 1.3vw;
+      font-weight: 400;
+      color: white;
+      line-height: 3vh;
+      cursor: pointer;
+      display: block;
+      margin-top: 3vh;
+    }
+    span{
+      width: 20vw;
+      font-size: 1.3vw;
+      font-weight: 400;
+      color: white;
+      line-height: 3vh;
+      display: block;
+      margin-top: 3vh;
+    }
+  }
+
+  &__image {
+    @include center-align-transform;
+    top: 5%;
+    left: 42%;
+    width: 50%;
+  }
+
+  .scroll-box {
+    @include center-align-transform;
+    top: 85%;
+    left: 50%;
+  }
+  .scroll-line{
+    @include center-align-transform;
+    bottom: -10%;
+    left: 50%;
+    width: 1px;
+    height: 15%;
+    background: white;
+    z-index: 299;
+  }
+
+  .scroll {
+    width: 4.5rem;
+  }
+
+  .left.carousel-control > i{
+    right: 1.5vw;
+    padding-top: 0.3vw;
+    position: absolute;
+  }
+  .left.carousel-control{
+    background: #b0d31e;
+    left: -5vw;
+    border-radius: 0;
+  }
+
+  .right.carousel-control > i{
+    left: 1.5vw;
+    padding-top: 0.3vw;
+    position: absolute;
+  }
+
+  .right.carousel-control{
+    background: #b0d31e;
+    left: 50.3vw;
+    border-radius: 0;
+  }
+
+  .indicatorLeft{
+    span{
+      position: absolute;
+      top: 57%;
+      left: -5vw;
+      font-size: 0.8vw;
+      color: #b0d31e;
+    }
+  }
+  .indicatorRight{
+    span{
+      position: absolute;
+      top: 57%;
+      right: 0;
+      left: 50.3vw;
+      font-size: 0.8vw;
+      color: #b0d31e;
+    }
+  }
+  .relative-container {
+    padding: 6vw 3vw 3vw 3vw;
+    img{
+      width: 30%;
+      padding-bottom: 1vh;
+    }
+    h1{
+      font-weight: 500;
+      font-size: 3vw;
+    }
+    h2{
+      font-size: 4.5vw;
+      color:black;
+      font-weight: 700;
+    }
+    .animated-item-2 {
+      color: black;
+      font-weight: 700;
+    }
+    p{
+      font-size: 1vw;
+    }
+
+  }
+}
+
+// .carousel-indicators {
+//   bottom: 0;
+//   li{
+//     margin: 1px 2rem;
+//   }
+//   .active{
+//     margin: 0 2rem;
+//   }
+// }
+
+
+
+
+.slider3 .active {
+  .animation.animated-item-1 {
+    -webkit-animation: fadeInUp 300ms linear 300ms both;
+    -moz-animation: fadeInUp 300ms linear 300ms both;
+    -o-animation: fadeInUp 300ms linear 300ms both;
+    -ms-animation: fadeInUp 300ms linear 300ms both;
+    animation: fadeInUp 300ms linear 300ms both;
+  }
+  .animation.animated-item-2 {
+    -webkit-animation: fadeInRight 300ms linear 600ms both;
+    -moz-animation: fadeInRight 300ms linear 600ms both;
+    -o-animation: fadeInRight 300ms linear 600ms both;
+    -ms-animation: fadeInRight 300ms linear 600ms both;
+    animation: fadeInRight 300ms linear 600ms both;
+  }
+  .animation.animated-item-3 {
+    -webkit-animation: fadeInUp 300ms linear 900ms both;
+    -moz-animation: fadeInUp 300ms linear 900ms both;
+    -o-animation: fadeInUp 300ms linear 900ms both;
+    -ms-animation: fadeInUp 300ms linear 900ms both;
+    animation: fadeInUp 300ms linear 900ms both;
+  }
+  .animation.animated-item-4 {
+    -webkit-animation: fadeInUp 300ms linear 1200ms both;
+    -moz-animation: fadeInUp 300ms linear 1200ms both;
+    -o-animation: fadeInUp 300ms linear 1200ms both;
+    -ms-animation: fadeInUp 300ms linear 1200ms both;
+    animation: fadeInUp 300ms linear 1200ms both;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .slider3 {
+
+    &__heading {
+      left: 45%;
+      font-size: 7vw;
+      z-index: 99;
+    }
+  }
+
+  .scroll-box {
+    display: none;
+  }
+  .scroll-line{
+    display: none;
+  }
+
+  .slider__image {
+    top: 50%;
+    left: 70%;
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 691px) {
+  .slider3 {
+
+    &__heading {
+      left: 45%;
+      font-size: 9vw;
+      z-index: 99;
+    }
+  }
+
+}

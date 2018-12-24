@@ -1,0 +1,177 @@
+.directorio {
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/background-negro.jpg);
+
+    [class^="col-"] {
+        padding: 0 1rem;
+    }
+
+    &__container {
+        padding: 20rem 5rem 15rem 20rem;
+    }
+
+    &__element {
+        position: relative;
+        background-color: $color-white;
+        width: 100%;
+        margin: 1rem 0;
+        height: 16rem;
+    }
+
+    &__img {
+        @include center-align-transform;
+        top: 50%;
+        left: 50%;
+        width: 11rem;
+
+        &--1 {
+            width: initial;
+            height: 8rem;
+        }
+
+        &--2 {
+            width: initial;
+            height: 5rem;
+        }
+
+        &--3 {
+            width: initial;
+            height: 4.5rem;
+        }
+
+        &--4 {
+            width: initial;
+            height: 7rem;
+        }
+
+    }
+
+    &__link {
+
+        &:hover ~ .directorio__more,
+        &:focus ~ .directorio__more {
+            animation: hoverInUp .3s ease-out;
+            opacity: 1;
+        }
+
+    }
+
+    &__more {
+        display: inline-block;
+        color: $color-violet;
+        font-weight: 500;
+        text-align: center;
+        margin-left: 4rem;
+        margin-top: 12.5rem; 
+        font-size: 1.3rem;
+        opacity: 0;
+    }
+
+    &__heading {
+        border-bottom: 1px solid $color-violet;
+        color: $color-violet;
+        font-size: 2rem;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        padding: .2rem;
+    }
+
+
+}
+
+@media screen and (max-width: 1199px) {
+
+    .directorio {
+        &__container {
+            padding: 20rem 5rem 15rem 15rem;
+        }
+
+        &__element {
+            height: 13rem;
+        }
+    
+        &__img {
+            width: 9rem;
+    
+            &--1 {
+                width: initial;
+                height: 6.5rem;
+            }
+    
+            &--2 {
+                width: initial;
+                height: 4rem;
+            }
+    
+            &--3 {
+                width: initial;
+                height: 4rem;
+            }
+    
+            &--4 {
+                width: initial;
+                height: 6rem;
+            }
+    
+        }
+
+        &__more {
+            margin-top: 10rem;
+            margin-left: 2.6rem;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 991px) {
+    .directorio {
+
+        &__container {
+            padding: 10rem 5rem 10rem 5rem;
+        }
+
+        &__more {
+            display: none;
+        }
+
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .directorio {
+
+        &__container {
+            padding: 8rem 2rem 5rem 2rem;
+        }
+
+        &__element {
+            height: 11rem;
+        }
+
+        &__img {
+            width: 8rem;
+    
+            &--1 {
+                width: initial;
+                height: 6rem;
+            }
+    
+            &--2 {
+                width: initial;
+                height: 3.5rem;
+            }
+    
+            &--3 {
+                width: initial;
+                height: 3rem;
+            }
+    
+            &--4 {
+                width: initial;
+                height: 5rem;
+            }
+    
+        }
+    }
+}

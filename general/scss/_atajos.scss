@@ -1,0 +1,16 @@
+.atajos {
+    width: 100vw;
+    
+    &__lista {
+        margin: 0;
+
+        li {
+            display: inline-block;
+        }
+    }
+
+    &__img {
+        width: calc(100vw/3);
+        margin-right: -4px;
+    }
+}

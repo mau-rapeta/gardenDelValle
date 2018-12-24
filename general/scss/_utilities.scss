@@ -1,0 +1,49 @@
+
+.bold-medium { font-weight: 500; }
+
+.red-bold {
+    color: $color-red;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.jump { display: block; }
+.space { margin-left: 6.5rem; }
+
+.relative-container { 
+    position: relative;
+    height: 70vh;
+}
+
+@mixin section-height {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+@mixin center-align-frame {
+    .container,
+    .container-fluid {
+        height: 100%;
+        .row {
+            height: inherit;
+            [class^="col-"] {
+                height: inherit;
+            }
+        }
+    }
+}
+
+@mixin center-align-transform {
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+@media only screen
+and (min-device-width: 834px)
+and (max-device-width: 1112px)
+and (orientation: landscape){
+    .servicios__heading-cont {
+        left: 60% !important;
+    }
+}

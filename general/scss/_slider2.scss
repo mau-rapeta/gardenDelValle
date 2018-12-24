@@ -1,0 +1,360 @@
+#slider2{
+  position: relative;
+  text-align: left;
+  vertical-align: middle;
+  overflow: hidden;
+  height: 100vh;
+  background: black;
+  padding: 5rem 2rem;
+  .row{
+    width: 100%;
+    padding-bottom: 15px;
+    margin: 0;
+  }
+  h2{
+    font-size: 6.5vw;
+    font-weight: 700;
+  }
+  span{
+    color:#a5a5a2;
+  }
+
+
+
+
+}
+
+.linkPrev{
+  margin-top: 5vh;
+  a{
+    color: #b0d31e;
+    font-size: 0.8vw;
+  }
+  .left{
+    float: left;
+  }
+  .right{
+    float: right;
+  }
+}
+
+.infoDir{
+  p{
+    line-height: 2.8vh;
+    a{
+      color:#a5a5a2;
+      img{
+        width: 1vw;
+      }
+    }
+    a:nth-child(12){
+      color: #b0d31e;
+      font-size: 0.8vw;
+    }
+  }
+
+}
+
+.localize{
+  padding-top: 30%;
+}
+
+.noPaddingLeft{
+  padding-left: 0;
+}
+
+.logo-container{
+  background: white;
+  text-align: center;
+  img{
+    width: 42%;
+    padding-top: 5vh;
+  }
+  p{
+    display: block;
+    padding: 2vh 0;
+    font-size: 1vw;
+    color: white;
+    margin: 0;
+  }
+}
+
+
+
+#slider2 > div.carousel.slide > div > div.item > div > div{
+  padding: 0;
+  margin-top: 10vh;
+}
+
+.noPaddingRight{
+  padding-right: 0;
+  a:hover{
+    .logo-container > p{
+      -webkit-animation: fadeInUp 100ms linear 100ms both;
+      -moz-animation: fadeInUp 100ms linear 100ms both;
+      -o-animation: fadeInUp 100ms linear 100ms both;
+      -ms-animation: fadeInUp 100ms linear 100ms both;
+      animation: fadeInUp 100ms linear 100ms both;
+      color: #797fbb;
+    }
+  }
+}
+
+#slider2, .carousel, .carousel-inner {
+  position: relative;
+  height: 100vh;
+
+}
+
+#slider2 .carousel {
+  position: relative;
+  height: 100%;
+}
+
+#slider2 .carousel-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#slider2 .carousel-indicators{
+  .active {
+    width: auto;
+    height: auto;
+    margin: 0;
+    background-color: transparent;
+  }
+  li {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin: 0;
+    text-indent: 0;
+    cursor: pointer;
+    background-color: #000 \9;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    border-radius: 10px;
+  }
+
+}
+
+#slider2 .carousel {
+  .carousel-content {
+    text-align: left;
+    width: 100%;
+    margin-top:5px;
+  }
+  .slide-margin{
+    margin: 0;
+    width: 100%;
+  }
+  h1 {
+    color: white;
+    text-align: left;
+    padding-left: 2vw;
+    font-weight: 800;
+    span{
+      color: white;
+      background: #e34f3d;
+      padding: 0.2vw 1vw;
+    }
+  }
+  .btn-slide {
+    padding: 8px 20px;
+    background: white;
+    color: #fff;
+    border-radius: 4px;
+    margin-top: 25px;
+    display: inline-block;
+  }
+
+  .slider-img{
+    text-align: center;
+    width: 100%
+  }
+
+  .titulo{
+    text-align: center;
+    width: 100%;
+    img{
+      width: 30%
+    }
+  }
+
+  .imagenSlider img {
+    width: 70%;
+  }
+
+  .item {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0 !important;
+    opacity: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    display: block !important;
+    height: 100%;
+    -webkit-transition: opacity ease-in-out 500ms;
+    -moz-transition: opacity ease-in-out 500ms;
+    -o-transition: opacity ease-in-out 500ms;
+    transition: opacity ease-in-out 500ms;
+
+
+    &first-child {
+      top: auto;
+      position: relative;
+    }
+  }
+
+  .item.active {
+    opacity: 1;
+    -webkit-transition: opacity ease-in-out 500ms;
+    -moz-transition: opacity ease-in-out 500ms;
+    -o-transition: opacity ease-in-out 500ms;
+    transition: opacity ease-in-out 500ms;
+    z-index: 1;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+}
+
+.logo-container2{
+  background: white;
+  text-align: center;
+  width: 10vw;
+  height: 20rem;
+  img{
+    width: 44%;
+    padding: 20% 0;
+  }
+}
+
+
+
+#slider2 .prev,
+#slider2 .next {
+  position: absolute;
+  top: 50%;
+  color: transparent;
+  display: inline-block;
+  margin-top: -25px;
+  height: 40px;
+  line-height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 4px;
+  z-index: 5;
+
+  &hover{
+    background-color: transparent;
+  }
+}
+
+#slider2{
+  .prev {
+    left: 10px;
+  }
+  .next {
+    right: 10px;
+  }
+  .carousel-indicators li img{
+    opacity: 0.5;
+  }
+
+  .carousel-indicators li:after img{
+    opacity: 0.5;
+  }
+  .carousel-indicators .active img{
+    opacity: 1.0;
+  }
+  .carousel-indicators .active:after img{
+    opacity: 1.0;
+  }
+}
+
+
+
+#slider2 .active {
+  .animation.animated-item-1 {
+    -webkit-animation: fadeInUp 300ms linear 300ms both;
+    -moz-animation: fadeInUp 300ms linear 300ms both;
+    -o-animation: fadeInUp 300ms linear 300ms both;
+    -ms-animation: fadeInUp 300ms linear 300ms both;
+    animation: fadeInUp 300ms linear 300ms both;
+  }
+  .animation.animated-item-2 {
+    -webkit-animation: fadeInUp 300ms linear 600ms both;
+    -moz-animation: fadeInUp 300ms linear 600ms both;
+    -o-animation: fadeInUp 300ms linear 600ms both;
+    -ms-animation: fadeInUp 300ms linear 600ms both;
+    animation: fadeInUp 300ms linear 600ms both;
+  }
+  .animation.animated-item-3 {
+    -webkit-animation: fadeInUp 300ms linear 900ms both;
+    -moz-animation: fadeInUp 300ms linear 900ms both;
+    -o-animation: fadeInUp 300ms linear 900ms both;
+    -ms-animation: fadeInUp 300ms linear 900ms both;
+    animation: fadeInUp 300ms linear 900ms both;
+  }
+  .animation.animated-item-4 {
+    -webkit-animation: fadeInUp 300ms linear 1200ms both;
+    -moz-animation: fadeInUp 300ms linear 1200ms both;
+    -o-animation: fadeInUp 300ms linear 1200ms both;
+    -ms-animation: fadeInUp 300ms linear 1200ms both;
+    animation: fadeInUp 300ms linear 1200ms both;
+  }
+}
+
+.button2 a{
+  color: #ffffff !important;
+  background: white;
+  font-size: 1.2em;
+  padding: 5px 10px;
+}
+
+
+/* 480px (WVGA - Low End Windows Phone) */
+@media screen and (max-width: 800px){
+  #slider2 .carousel {
+    h1 {
+      font-size: 15vw;
+      line-height: 10vh;
+    }
+
+    .item.active {
+      opacity: 1;
+      -webkit-transition: opacity ease-in-out 500ms;
+      -moz-transition: opacity ease-in-out 500ms;
+      -o-transition: opacity ease-in-out 500ms;
+      transition: opacity ease-in-out 500ms;
+      z-index: 1;
+      background-size: cover;
+      background-attachment: scroll;
+    }
+  }
+}
+
+
+@media only screen and (max-device-width: 834px) and (orientation: landscape){
+  #slider2 .carousel h1 {
+    font-size: 7vw;
+  }
+}
+
+
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: portrait)
+{
+  #slider2 .carousel h1 {
+    font-size: 9vw;
+    line-height: 10vh;
+  }
+}

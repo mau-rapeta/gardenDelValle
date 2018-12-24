@@ -1,0 +1,95 @@
+.nosotros {
+    @include section-height;
+    background-image: url(../img/nosotros.jpg);
+    background-position: top;
+    min-height: 80rem;
+
+    @include center-align-frame;
+
+    &__heading-cont {
+        @include center-align-transform;
+        top: 50%;
+        left: 55%;
+        text-align: right;
+    }
+
+    &__heading {
+        text-transform: uppercase;
+        font-size: 6rem;
+        margin-bottom: 3rem;
+    }
+
+    &__sub-heading {
+        text-transform: uppercase;
+        font-size: 1.35rem;
+        white-space: nowrap;
+    }
+
+    &__content {
+        @include center-align-transform;
+        top: 54%;
+        left: 50%;
+        font-size: 2rem;
+        width: 45rem;
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .nosotros {
+        background-position: left;
+        min-height: 70rem;
+        max-height: 80rem;
+
+        .container,
+        .container-fluid {
+            .row {
+                [class^="col-"] {
+                    height: 50%;
+                }
+            }
+        }
+
+        &__heading-cont {
+            top: 90%;
+            left: 50%;
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .nosotros {
+
+        &__heading {
+            font-size: 5rem;
+        }
+
+        &__sub-heading {
+            font-size: 1.25rem;
+        }
+
+        &__content {
+            font-size: 1.5rem;
+            width: 35rem;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .nosotros {
+
+        &__heading {
+            font-size: 4.5rem;
+        }
+
+        &__sub-heading {
+            font-size: 1.15rem;
+        }
+
+        &__content {
+            font-size: 1.5rem;
+            width: 30rem;
+        }
+    }
+}

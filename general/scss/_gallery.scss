@@ -1,0 +1,52 @@
+.gallery{
+  position: relative;
+  height: auto;
+  background: #1d1d1b;
+  padding: 8rem 5rem;
+}
+
+.socialButtonGeneral a:hover{
+  color: #b0d31e;
+}
+
+.socialButtonInstagram{
+  color: #b0d31e;
+  border: 1px solid #b0d31e;
+  padding: 1rem 2rem;
+  margin: 5rem auto;
+  display: block;
+  width: 19rem;
+  white-space: nowrap;
+}
+
+.socialButtonInstagram:hover a{
+  font-weight: 700;
+  color: #b0d31e;
+}
+
+
+.btn-primary {
+  color: #b0d31e;
+  background-color: #1d1d1b;
+  border-color: #b0d31e;
+  font-size: 1vw;
+  border-radius: 0;
+}
+
+.btn-primary:hover {
+  color: #b0d31e;
+  background-color: #1d1d1b;
+  border-color: #b0d31e;
+  font-size: 1vw;
+  border-radius: 0;
+}
+
+.masongram-image-caption p:nth-child(2){
+  font-size: 1.5vh;
+}
+
+@media (min-width: 641px){
+.masongram-container .masongram-image-container.masongram-image-size-standard_resolution, .masongram-container .masongram-image-sizer.masongram-image-size-standard_resolution {
+  width: 33.3%;
+}
+}

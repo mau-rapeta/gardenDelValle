@@ -1,0 +1,157 @@
+.servicios {
+    @include section-height;
+    background-color: $color-black;
+    min-height: 82rem;
+    overflow: hidden;
+
+    @include center-align-frame;
+
+    &__heading-cont {
+        @include center-align-transform;
+        top: 60%;
+        left: 55%;
+        text-align: left;
+        color: $color-red;
+    }
+
+    &__heading {
+        text-transform: uppercase;
+        font-size: 6rem;
+        margin-bottom: 3rem;
+    }
+
+    &__sub-heading {
+        text-transform: uppercase;
+        font-size: 1.35rem;
+        white-space: nowrap;
+
+        &--white {
+            color: $color-white;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: .5rem;
+        }
+    }
+
+    &__content {
+        @include center-align-transform;
+        top: 55%;
+        left: 50%;
+        font-size: 1.5rem;
+        width: 45rem;
+        text-align: justify;
+        padding: 0 5rem;
+
+        ul {
+            margin-left: 2rem;
+
+            li {
+                font-size: 1.3rem;
+                white-space: nowrap;
+            }
+        }
+
+        &--1 {
+            top: 43%;
+        }
+    }
+
+    &__icon-box {
+        width: 18rem;
+        margin: .5rem auto;
+    }
+
+    &__icon {
+        height: 23rem;
+        margin: 0 auto;
+    }
+
+    &__image-box {
+        margin-bottom: 2rem;
+    }
+
+    &__image {
+        width: 55rem;
+    }
+}
+
+.border__50{
+    border-left: 1px white solid;
+}
+
+@media screen and (max-width: 991px) {
+    .servicios {
+        min-height: 97rem;
+        max-height: 100rem;
+
+        .container,
+        .container-fluid {
+            .row {
+                [class^="col-"] {
+                    height: 50%;
+                }
+            }
+        }
+
+        &__content {
+            top: 230%;
+            left: 50%;
+        }
+
+        &__heading-cont {
+            top: -150%;
+            left: 50%;
+            text-align: center;
+        }
+    }
+    .border__50{
+        border-left: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .servicios {
+
+        &__heading {
+            font-size: 5rem;
+        }
+
+        &__sub-heading {
+            font-size: 1.25rem;
+            &--white {
+                font-size: 1.5rem;
+            }
+        }
+
+        &__content {
+            font-size: 1.5rem;
+
+            ul {
+
+                li {
+                    white-space: normal;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .servicios {
+
+        &__heading {
+            font-size: 4.5rem;
+        }
+
+        &__sub-heading {
+            white-space: normal;
+        }
+
+        &__content {
+            //font-size: 1.2rem;
+            width: 39rem;
+        }
+    }
+
+
+}

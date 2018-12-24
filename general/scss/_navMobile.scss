@@ -1,0 +1,59 @@
+.navMobile {
+    width: 100vw;
+    z-index: 50;
+    height: 100vh;
+    position: fixed;
+    overflow: scroll;
+    background: rgba(29, 29, 27, 0.8);
+    left: -100%;
+
+    &__list {
+        margin: 0 auto;
+        margin-top: 15rem;
+        list-style: none;
+        width: 70%;
+    }
+
+    &__links {
+        text-transform: uppercase;
+        font-size: 2rem;
+        margin: 2rem 0;
+        color: $color-white;
+
+        &:hover,
+        &:focus {
+            color: $color-violet;
+        }
+
+        i {
+            color: $color-violet;
+            margin-right: 1rem;
+            background-color: $color-violet;
+            height: 1.9rem;
+            width: 1.9rem;
+            border: none;
+            border-radius: .2rem;
+            margin-top: .10rem;
+        }
+
+        &.active {
+            color: $color-violet;
+        }
+    }
+
+    &__social {
+        margin: 0 auto;
+        margin-top: 3rem;
+        width: 50%;
+
+        p {
+            text-align: center;
+            font-size: 1.8rem;
+        }
+    }
+
+    &__social-img {
+        width: 48%;
+        display: inline-block;
+    }
+}
